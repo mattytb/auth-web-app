@@ -1,0 +1,38 @@
+.users .loaderMain {
+	float:left;
+	margin-left:50px;
+}
+.users ul {
+	list-style: none;
+	width:calc(100% -50px);
+	margin:50px;
+	padding: 0 0px;
+	border-top:1px solid #ccc;
+}
+.users ul li {
+	border-bottom:1px solid #ccc;
+	padding:10px 0;
+	float:left;
+	clear:left;
+	width:100%;
+}
+.users ul li img {
+	float:left;
+	margin-top:5px;
+}
+.users ul li span {
+	float:left;
+	margin:20px;
+
+}
+
+.users #deleteButton {
+	float:right;
+	margin-top:15px;
+}
+
+@media only screen and (max-width: 935px) {
+	.users ul {
+		margin: 0 25px;
+	}
+}
