@@ -45,4 +45,4 @@ typings/
 # dotenv environment variables file
 .env
 
-settings.js
+#settings.js
