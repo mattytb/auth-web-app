@@ -30,7 +30,7 @@ export default class App extends React.Component {
 	componentDidMount() {
 
       window.fbAsyncInit = function() {
-
+        console.log('facebook loaded');
          FB.init({
             appId      : Settings.FBAppId,
             cookie     : true,  

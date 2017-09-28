@@ -22,9 +22,10 @@ export default class ShowUsers extends React.Component {
   	componentDidMount() {
 		GetUsers(this.props.user.token, this.props.user.id)
 		.then(response => {
-			this.setState({users:response.data});
+			this.setState({users:response.data.users});
 		}).catch(err => {
-			this.setState({error :true})
+			this.props.onLogoutClick();
+			this.props.setLoggedInStateToNull();
 		});
   	}
 
@@ -32,10 +33,7 @@ export default class ShowUsers extends React.Component {
 		
 		var users = null;
 
-		if(this.state.error){
-			users = <Redirect to="/" />
-		}
-		else if(this.state.users){
+		if(this.state.users){
 
 			users = <ul>
 			{ this.state.users.map((user, index) => {
@@ -44,7 +42,7 @@ export default class ShowUsers extends React.Component {
 			 		<li key={index}>
 			 			<img src={user.image} alt={user.name}/> 
 			 			<span>{user.name}</span>
-			 			{this.props.user.id === user.id ? <DeleteUserButton userId={user.id} token={this.props.user.token} onClick={() => this.props.onLogoutClick()} /> : null }
+			 			{this.props.user.id === user.id ? <DeleteUserButton userId={user.id} token={this.props.user.token} onClick={() => this.props.onLogoutClick()} setLoggedInStateToNull={this.props.setLoggedInStateToNull} /> : null }
 			 		</li>
 		 		) 
 			})} </ul>

@@ -20,11 +20,12 @@
 	margin:0;
 	margin-bottom:10px;
 }
+
 #content .inner h3 {
 	font-size: 22px;
 	margin-top:25px;
 }
-#content .inner p {
+#content .inner p, #content .inner ol {
 	font-size: 16px;
 	font-family: sans-serif;
 	color: #808080;
@@ -33,14 +34,27 @@
 	padding:0px 45px;
 	margin:3.5px 0;
 }
+#content .inner p i {
+    font-size:14px;
+    color:black;
+}
+#content .inner p a {
+    color:black;
+}
+#content .inner ol {
+    margin:10px 0 20px 0px;
+
+}
+#content .inner ol li {
+    margin-bottom:5px;
+    margin-left:25px;
+}
 .bgWrap {
-	margin-top:50px;
+	margin:50px 0;
 	float:left;
 	background-color: #fff;
 	width:100%;
 	padding:25px 0 50px 0;
-
-	
 	box-shadow: 3px 3px 3px #ccc;
 }
 
